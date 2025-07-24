@@ -1,0 +1,53 @@
+{
+  "name": "Qih",
+  "short_name": "Qih",
+  "description": "ChatApp dengan dukungan offline, sinkronisasi latar belakang, dan notifikasi.",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "browser"],
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "icons": [
+    {
+      "src": "/faqih.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/faqih.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/faqih.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "categories": ["social", "communication", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Open Chat",
+      "short_name": "Chat",
+      "url": "/chat.html",
+      "icons": [
+        {
+          "src": "/faqih.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}

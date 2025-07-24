@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="faqih.png" />
+    <link rel="apple-touch-icon" href="faqih.png" />
+    <meta name="theme-color" content="#000000" />
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('✅ Service Worker registered'))
+          .catch((err) => console.error('❌ Service Worker registration failed:', err));
+      }
+    </script>
+
+    <script type="module" src="/message.js"></script>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const mode = params.get("mode");
+      const oobCode = params.get("oobCode");
+
+      if (mode === "verifyEmail" && oobCode) {
+        window.location.href = `/verivikasi.html?mode=${mode}&oobCode=${oobCode}`;
+      } else {
+        window.location.href = "intro.html";
+      }
+    </script>
+  </head>
+  <body>
+    <noscript></noscript>
+  </body>
+</html>
